@@ -30,10 +30,17 @@ int main(int argc, char *argv[])
     return EXIT_FAILURE;
   }
 
+  glk_startup_t startdata;
+
   printf("MinGlk - Minimal Glk Library (v%s)\n\n", LIBRARY_VERSION);
 
   glk_main();
   glk_exit();
+
+  if (!glk_startup_code(&startdata))
+  {
+    glk_exit();
+  }
 
   return EXIT_SUCCESS;
 }
