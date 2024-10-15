@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "glk.h"
 #include "minglk.h"
+#include "glkstart.h"
 
 int main(int argc, char *argv[])
 {
